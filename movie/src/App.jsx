@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "./component/SearchBar";
-import Card from "./component/Card";
-import MovieDetails from "./component/MovieDetails";
+import SearchBar from "./Component/SearchBar";
+import Card from "./Component/Card";
+import MovieDetails from "./Component/MovieDetails";
 
 function App() {
   const [query, setQuery] = useState("");
