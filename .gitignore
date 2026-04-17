@@ -1,0 +1,2 @@
+# Ignore environment file in movie app
+/movie/.env
