@@ -38,7 +38,13 @@ function App() {
         ))}
       </div>
 
-      {selectedMovie && <MovieDetails movie={selectedMovie} />}
+      {selectedMovie && (
+        <MovieDetails
+          movie={selectedMovie}
+          apiKey={API_KEY}
+          onBack={() => setSelectedMovie(null)}
+        />
+      )}
     </div>
   );
 }

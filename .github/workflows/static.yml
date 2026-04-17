@@ -36,9 +36,11 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: cd movie && npm install
+        run: npm install
+        working-directory: movie
       - name: Build
-        run: cd movie && npm run build
+        run: npm run build
+        working-directory: movie
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

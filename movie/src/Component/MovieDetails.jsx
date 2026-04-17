@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-export default function MovieDetails({ movie, onBack }) {
+export default function MovieDetails({ movie, apiKey, onBack }) {
   const [details, setDetails] = useState(null);
 
-  const API_KEY = "YOUR_API_KEY_HERE";
-
   useEffect(() => {
-    fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${API_KEY}`)
+    if (!apiKey) return;
+
+    fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${apiKey}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
-  }, [movie]);
+  }, [movie, apiKey]);
 
   if (!details) return <p>Loading...</p>;
 
