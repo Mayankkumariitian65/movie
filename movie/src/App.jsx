@@ -8,7 +8,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  const API_KEY = "de3ac537";
+  const API_KEY = "a3987981";
 
   useEffect(() => {
     if (query) {
