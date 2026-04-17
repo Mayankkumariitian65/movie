@@ -8,7 +8,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  const API_KEY = "a3987981";
+ const API_KEY = import.meta.env.VITE_TMDB_API_KEY ;
 
   useEffect(() => {
     if (query) {
